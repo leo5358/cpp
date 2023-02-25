@@ -12,7 +12,8 @@
         "numeric": "cpp",
         "chrono": "cpp",
         "limits": "cpp",
-        "valarray": "cpp"
+        "valarray": "cpp",
+        "xiosbase": "cpp"
     },
     "C_Cpp.errorSquiggles": "disabled",
 }

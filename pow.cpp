@@ -1,9 +1,10 @@
 #include<bits/stdc++.h>
+#define int long long
 using namespace std;
 
 int main()
 {
-long long n,c;
+int n,c;
 cin>>n;
 for(int i=0;i<=n;i++)
 {
