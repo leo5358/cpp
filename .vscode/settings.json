@@ -13,7 +13,8 @@
         "chrono": "cpp",
         "limits": "cpp",
         "valarray": "cpp",
-        "xiosbase": "cpp"
+        "xiosbase": "cpp",
+        "random": "cpp"
     },
     "C_Cpp.errorSquiggles": "disabled",
 }
