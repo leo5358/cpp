@@ -4,14 +4,12 @@ using namespace std;
 int main()
 {
     fine
-    string a,b,c;
-    char upperA,upperB,upperC;
-    while(cin>>a>>b>>c)
+    string a;
+    string upperA,last;
+    while(cin>>a)
     {
-        upperA=toupper(a[0]);
-        upperB=toupper(b[0]);
-        upperC=toupper(c[0]);
-        cout<<upperA<<upperB<<upperC<<" "<<c<<endl;
+        upperA+=(a[0]+65)+" ";
+        last=a;
     }
-
+    cout<<upperA<<" "<<last<<endl;
 }
