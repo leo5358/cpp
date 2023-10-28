@@ -15,7 +15,11 @@
         "valarray": "cpp",
         "xiosbase": "cpp",
         "random": "cpp",
-        "complex": "cpp"
+        "complex": "cpp",
+        "list": "cpp",
+        "algorithm": "cpp",
+        "forward_list": "cpp",
+        "vector": "cpp"
     },
     "C_Cpp.errorSquiggles": "disabled",
 }
