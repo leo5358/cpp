@@ -22,6 +22,7 @@ int check(int num){
 	}
 }
 int main(){
+	fin
 	int n;
 	int temp;
 	int building;

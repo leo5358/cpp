@@ -1,31 +1,33 @@
-#include<bits/stdc++.h>
-#define fin ios_base::sync_with_stdio(0);cin.tie(0);
-using namespace std;
+#include <iostream>
+#include <vector>
 
-int main(){
-	fin
-	int n;
-	while(cin>>n){
-		int temp;
-		int ans=0;
-		vector<int>dp(n);
-		vector<int>matrix(n+1);
-		for(int i=0;i<n;i++){
-			cin>>temp;
-			matrix.push_back(temp);
-		}
-		dp[0]=matrix[0];
-		for(int j=1;j<n;j++){
-			dp[j]=max(dp[j-1]+matrix[j],matrix[j]);
-		}
-		for(int k=0;k<n-1;k++){
-			ans=max(dp[k],dp[k+1]);
-		}
-		if(ans>0){
-			cout<<"The maximum winning streak is"<<" "<<ans<<endl;
-		}
-		else{
-			cout<<"Losing streak."<<endl;
-		}
-	}
+int maxWinningStreak(const std::vector<int>& bets) {
+    int maxSum = 0; 
+    int currentSum = 0;
+
+    for (int bet : bets) {
+        currentSum = std::max(0, currentSum + bet);
+        maxSum = std::max(maxSum, currentSum);
+    }
+
+    return maxSum;
+}
+
+int main() {
+    int N;
+    while (std::cin >> N && N != 0) {
+        std::vector<int> bets(N);
+        for (int i = 0; i < N; ++i) {
+            std::cin >> bets[i];
+        }
+
+        int maxStreak = maxWinningStreak(bets);
+        if (maxStreak > 0) {
+            std::cout << "The maximum winning streak is " << maxStreak << "." << std::endl;
+        } else {
+            std::cout << "Losing streak." << std::endl;
+        }
+    }
+
+    return 0;
 }

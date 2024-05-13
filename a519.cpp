@@ -1,22 +1,34 @@
-#include<bits/stdc++.h>
-#define fin ios_base::sync_with_stdio(0);cin.tie(0);
-#define int long long 
-using namespace std;
-vector<int>dp;
+#include <bits/stdc++.h>
 
-int f(int n){
-	for(int i=2;i<=n;i++){
-		dp[i]=dp[i-1]+dp[i-2];
-	}
-	return dp[n];
+using namespace std;
+
+unsigned long f(unsigned int num) {
+
+    if (num == 1) return 1;
+    if (num == 2) return 2;
+
+    unsigned long fib[num + 1];
+    fib[1] = 1;
+    fib[2] = 2;
+
+    for (int i = 3; i <= num; ++i) {
+        fib[i] = fib[i - 1] + fib[i - 2];
+    }
+
+    return fib[num];
 }
 
-unsigned main(){
-	int n;
-	dp[0]=1;
-	dp[1]=1;
-	while(cin>>n){
-		cout<<f(n)<<endl;
-	}
+int main() {
 
+    int a;
+    while(cin >> a) {
+        if (a == 0) {
+            break;
+        }
+        else {
+            cout << f(a) << endl;
+        }
+    }
+
+    return 0;
 }
